@@ -87,33 +87,33 @@ def sort_images(files_list, NUM_CLUSTERS):
         if dominant_rgb[0] == dominant_rgb[1] == dominant_rgb[2]: 
             shutil.copy(new_filename, 'black and white')
 
-        # pastel
-        elif dominant_rgb[0] >= pastel_limit and  dominant_rgb[1] >= pastel_limit and  dominant_rgb[2] >= pastel_limit:
-            shutil.copy(new_filename, 'pastel')
+        # # pastel
+        # elif dominant_rgb[0] >= pastel_limit and  dominant_rgb[1] >= pastel_limit and  dominant_rgb[2] >= pastel_limit:
+        #     shutil.copy(new_filename, 'pastel')
 
-        # blue more than red but less than green (green to cyan)
-        elif dominant_rgb[2] > dominant_rgb[0] and dominant_rgb[2] < dominant_rgb[1]:
-            shutil.copy(new_filename, 'cyan')
+        # # blue more than red but less than green (green to cyan)
+        # elif dominant_rgb[2] > dominant_rgb[0] and dominant_rgb[2] < dominant_rgb[1]:
+        #     shutil.copy(new_filename, 'cyan')
 
-        # blue more than green but less than red (red to magenta)
-        elif dominant_rgb[2] > dominant_rgb[1] and dominant_rgb[2] < dominant_rgb[0]:
-            shutil.copy(new_filename, 'magenta')
+        # # blue more than green but less than red (red to magenta)
+        # elif dominant_rgb[2] > dominant_rgb[1] and dominant_rgb[2] < dominant_rgb[0]:
+        #     shutil.copy(new_filename, 'magenta')
 
-        # green more than red but less than blue (blue to cyan)
-        elif dominant_rgb[1] > dominant_rgb[0] and dominant_rgb[1] < dominant_rgb[2]:
-            shutil.copy(new_filename, 'cyan')
+        # # green more than red but less than blue (blue to cyan)
+        # elif dominant_rgb[1] > dominant_rgb[0] and dominant_rgb[1] < dominant_rgb[2]:
+        #     shutil.copy(new_filename, 'cyan')
         
-        # green more than blue but less than  red (red to yellow)
-        elif dominant_rgb[1] > dominant_rgb[2] and dominant_rgb[1] < dominant_rgb[0]:
-            shutil.copy(new_filename, 'yellow')
+        # # green more than blue but less than  red (red to yellow)
+        # elif dominant_rgb[1] > dominant_rgb[2] and dominant_rgb[1] < dominant_rgb[0]:
+        #     shutil.copy(new_filename, 'yellow')
         
-        # red more than green but less than blue (blue to magenta)
-        elif dominant_rgb[0] > dominant_rgb[1] and dominant_rgb[0] < dominant_rgb[2]:
-            shutil.copy(new_filename, 'magenta')
+        # # red more than green but less than blue (blue to magenta)
+        # elif dominant_rgb[0] > dominant_rgb[1] and dominant_rgb[0] < dominant_rgb[2]:
+        #     shutil.copy(new_filename, 'magenta')
 
-        # red more than blue but less than green (green to yellow)
-        elif dominant_rgb[0] > dominant_rgb[2] and dominant_rgb[0] < dominant_rgb[1]:
-            shutil.copy(new_filename, 'yellow')
+        # # red more than blue but less than green (green to yellow)
+        # elif dominant_rgb[0] > dominant_rgb[2] and dominant_rgb[0] < dominant_rgb[1]:
+        #     shutil.copy(new_filename, 'yellow')
 
         # mostly red
         elif dominant_rgb[0] > (dominant_rgb[1]-int(dominant_rgb[1]*percent_range)) and dominant_rgb[0] > (dominant_rgb[2]-int(dominant_rgb[2]*percent_range)): 
