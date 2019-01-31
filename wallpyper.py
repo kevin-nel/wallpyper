@@ -52,19 +52,18 @@ def check_category_directories():
                 # os.removedirs('')
 
 
-#            else:
-#                pass
 #        else:
-#            if (
-#                input(
-#                    "there is already a directory named \"sorted\" would you\n"
-#                   "like to make a new one, (y)es or (n)o to overwrite.\n"
-#                   "Warning! this will erase all content in the directory\n"
-#                )
-#                == "y"
-#            ):
-#
-#                os.mkdir("sorted")
+#            pass
+#    else:
+#        if (
+#            input(
+#                "there is already a directory named \"sorted\" would you\n"
+#               "like to make a new one, (y)es or (n)o to overwrite.\n"
+#               "Warning! this will erase all content in the directory\n"
+#            )
+#            == "y"
+#        ):
+#            os.mkdir("sorted")
 
 @jit(nopython=True)
 def get_dominant_colors(filename, NUM_CLUSTERS):
