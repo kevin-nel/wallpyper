@@ -5,10 +5,7 @@ import scipy
 import scipy.misc
 import scipy.cluster
 import os
-from numba import jit
 
-
-@jit(nopython=True)
 def check_category_directories():
     path_to_images = input("please paste the path to the image directory\n")
     os.chdir(path_to_images)
@@ -65,7 +62,6 @@ def check_category_directories():
 #        ):
 #            os.mkdir("sorted")
 
-@jit(nopython=True)
 def get_dominant_colors(filename, NUM_CLUSTERS):
     ImageFile.LOAD_TRUNCATED_IMAGES = True
     # print ('reading image')
@@ -112,7 +108,6 @@ def get_dominant_colors(filename, NUM_CLUSTERS):
         pass
 
 
-@jit(nopython=True)
 def sort_images(files_list, NUM_CLUSTERS):
     check_category_directories()
 
